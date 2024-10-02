@@ -5,7 +5,29 @@ date: "2024-10-01"
 output: html_document
 ---
 ```{r setup, include=FALSE}
+library("tidyverse")
+```
+
+---
+title: 'Homework #2'
+author: "Iris Hart"
+date: "2024-10-01"
+output: html_document
+---
+```{r setup, include=FALSE}
 install.packages("tidyverse")
 ```
 
+##Problem 1
+Read the NYC Transit Subway Entrance and Exit CSV File
+```{r setup, include=FALSE}
+nyc_transit <- read.csv("NYC_Transit_Subway_Entrance_And_Exit_Data.csv", stringsAsFactors = FALSE)
+```
 
+Check Column lines
+```{r}
+colnames(nyc_transit)
+```
+
+Clean the data by retaining certain columns
+```{r}
